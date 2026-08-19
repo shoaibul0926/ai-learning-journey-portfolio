@@ -41,19 +41,13 @@
   .highlight-list li{ display:flex; gap:12px; color:var(--text-soft); font-size:1.02rem; align-items:flex-start; }
   .highlight-list li::before{ content:"▸"; color:var(--teal-soft); flex-shrink:0; font-weight:700; }
   .highlight-list strong{ color:#fff; }
+  .intro-text{ color:var(--text-soft); font-size:1rem; margin-bottom:26px; }
 
-  .term-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:26px; }
-  @media (max-width:700px){ .term-grid{ grid-template-columns:1fr; } }
-  .term{ background:#0b0f19; border:1px solid var(--glass-border); border-radius:12px; overflow:hidden; box-shadow:0 14px 34px var(--shadow); }
-  .term-bar{ display:flex; align-items:center; gap:8px; padding:10px 14px; background:#141c2c; border-bottom:1px solid rgba(255,255,255,0.08); }
-  .term-dot{ width:11px; height:11px; border-radius:50%; }
-  .term-dot.red{ background:#ff5f57; } .term-dot.yellow{ background:#febc2e; } .term-dot.green{ background:#28c840; }
-  .term-label{ margin-left:8px; font-size:0.75rem; color:var(--text-faint); font-family:Consolas,'SFMono-Regular',monospace; }
-  .term-body{ padding:16px 18px; font-family:Consolas,'SFMono-Regular',monospace; font-size:0.84rem; line-height:1.9; }
-  .term-body .prompt{ color:var(--teal-soft); }
-  .term-body .cmdtext{ color:#e8edf5; }
-  .term-body .out{ color:var(--text-faint); display:block; }
-  .term-body .ok{ color:#4ade80; }
+  .step-list{ display:flex; flex-direction:column; gap:16px; margin-top:28px; padding-top:26px; border-top:1px solid var(--glass-border); }
+  .step{ display:flex; gap:16px; align-items:flex-start; padding:18px 20px; background:var(--glass-bg-strong); border:1px solid var(--glass-border); border-radius:14px; }
+  .step-num{ flex-shrink:0; width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.85rem; background:linear-gradient(135deg, var(--sky), var(--amber)); color:#06131c; }
+  .step-text{ color:var(--text-soft); font-size:0.98rem; }
+  .step-text strong{ color:#fff; }
 
   footer{ margin-top:60px; color:var(--text-faint); font-size:0.84rem; text-align:center; }
   footer .name{ color:var(--teal-soft); font-weight:600; }
@@ -70,36 +64,19 @@
         <h1>📧 Gmail API &amp; Automation</h1>
         <span class="panel-date">Day 3 · Aug 19, 2026</span>
       </div>
+      <p class="intro-text">Day 3 moved from writing code to connecting real services — setting up Google's Gmail API and bringing Claude Pro into my terminal so I could automate a task end to end.</p>
       <ul class="highlight-list">
-        <li>Connected the terminal with <strong>Google Cloud Platform</strong>.</li>
-        <li>Created and configured <strong>Gmail API credentials</strong> (OAuth, send-only scope).</li>
-        <li>Learned <strong>authentication and API integration</strong> basics.</li>
-        <li>Built a workflow to <strong>send emails programmatically</strong> using Claude from the terminal.</li>
+        <li>Connected my terminal to <strong>Google Cloud Platform</strong> to start building a real integration, not just a local script.</li>
+        <li>Learned the basics of <strong>authentication and API integration</strong> — why apps need permission before they can act on your behalf.</li>
+        <li>Built a working pipeline to <strong>send emails programmatically</strong> straight from the terminal.</li>
       </ul>
 
-      <div class="term-grid">
-        <div class="term">
-          <div class="term-bar"><span class="term-dot red"></span><span class="term-dot yellow"></span><span class="term-dot green"></span><span class="term-label">terminal — git</span></div>
-          <div class="term-body">
-            <div><span class="prompt">$</span> <span class="cmdtext">git init</span></div>
-            <span class="out">Initialized empty Git repository</span>
-            <div><span class="prompt">$</span> <span class="cmdtext">git add .</span></div>
-            <div><span class="prompt">$</span> <span class="cmdtext">git commit -m "initial commit"</span></div>
-            <span class="out">1 file changed, 68 insertions(+)</span>
-            <div><span class="prompt">$</span> <span class="cmdtext">git push origin main</span></div>
-            <span class="out ok">✓ up to date with origin/main</span>
-          </div>
-        </div>
-        <div class="term">
-          <div class="term-bar"><span class="term-dot red"></span><span class="term-dot yellow"></span><span class="term-dot green"></span><span class="term-label">terminal — gmail api</span></div>
-          <div class="term-body">
-            <div><span class="prompt">$</span> <span class="cmdtext">python authorize.py</span></div>
-            <span class="out">Opening OAuth consent screen…</span>
-            <span class="out ok">✓ token.json saved</span>
-            <div><span class="prompt">$</span> <span class="cmdtext">python send_report_email.py</span></div>
-            <span class="out ok">✓ Sent. Message id: 1a01acfd…</span>
-          </div>
-        </div>
+      <div class="step-list">
+        <div class="step"><span class="step-num">1</span><p class="step-text"><strong>Set up the Gmail API</strong> in Google Cloud Console — created a project, enabled the Gmail API, and configured the OAuth consent screen.</p></div>
+        <div class="step"><span class="step-num">2</span><p class="step-text"><strong>Restricted the access on purpose</strong> — requested only a send-only permission, so the integration could send mail but never read my inbox.</p></div>
+        <div class="step"><span class="step-num">3</span><p class="step-text"><strong>Completed the OAuth authorization</strong> once through the browser consent screen, after which the terminal was trusted to send email without asking again each time.</p></div>
+        <div class="step"><span class="step-num">4</span><p class="step-text"><strong>Linked my Claude Pro subscription into the terminal</strong> using the Claude Code commands, so I could work with Claude directly from the command line instead of the browser.</p></div>
+        <div class="step"><span class="step-num">5</span><p class="step-text">Used that terminal-connected Claude session to <strong>build and run the script</strong> that sends this learning report by email automatically.</p></div>
       </div>
     </div>
     <footer>Learner: <span class="name">Shoaibul Hoque</span></footer>

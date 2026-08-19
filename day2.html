@@ -41,6 +41,7 @@
   .highlight-list li{ display:flex; gap:12px; color:var(--text-soft); font-size:1.02rem; align-items:flex-start; }
   .highlight-list li::before{ content:"▸"; color:var(--teal-soft); flex-shrink:0; font-weight:700; }
   .highlight-list strong{ color:#fff; }
+  .intro-text{ color:var(--text-soft); font-size:1rem; margin-bottom:26px; }
   .cmd-row{ display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 24px; }
   .cmd{ font-family:Consolas,'SFMono-Regular',monospace; font-size:0.85rem; background:rgba(0,0,0,0.35); border:1px solid var(--glass-border); color:var(--teal-soft); padding:6px 12px; border-radius:6px; }
 
@@ -76,9 +77,10 @@
         <h1>🔧 Git Commands &amp; Deployment</h1>
         <span class="panel-date">Day 2 · Aug 18, 2026</span>
       </div>
+      <p class="intro-text">After uploading files by hand on Day 1, Day 2 was about learning the proper way developers actually ship code — using Git from the terminal instead of the GitHub website.</p>
       <ul class="highlight-list">
-        <li>Learned how <strong>Git works</strong> in a real development workflow.</li>
-        <li>Practiced the core Git commands used to ship code:</li>
+        <li>Learned how <strong>Git works</strong> in a real development workflow — tracking changes locally before they ever reach GitHub.</li>
+        <li>Practiced the core Git loop used to ship code, end to end:</li>
       </ul>
       <div class="cmd-row">
         <span class="cmd">git init</span>
@@ -87,8 +89,12 @@
         <span class="cmd">git push</span>
       </div>
       <ul class="highlight-list">
-        <li>Learned how to <strong>update code</strong> after making changes locally.</li>
-        <li>Learned how to <strong>push updates to GitHub</strong> and make changes live.</li>
+        <li><strong>git init</strong> — turned a normal folder into a Git repository.</li>
+        <li><strong>git add</strong> — staged the files I wanted to save a checkpoint of.</li>
+        <li><strong>git commit</strong> — saved that checkpoint with a message describing what changed.</li>
+        <li><strong>git push</strong> — sent the commit up to GitHub so it was live and visible to anyone.</li>
+        <li>Learned how to <strong>update code after making changes</strong> locally — edit, add, commit, push again — instead of re-uploading whole folders.</li>
+        <li>Used this exact workflow to properly deploy the <strong>Basketball Shooter</strong> game and enable GitHub Pages, turning the repo into a live, playable website.</li>
       </ul>
 
       <div class="project-box">
