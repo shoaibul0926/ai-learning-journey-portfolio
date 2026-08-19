@@ -107,6 +107,7 @@
     padding:32px 26px; border-radius:18px; text-align:left;
     background:var(--glass-bg); border:1px solid var(--glass-border);
     transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    cursor:pointer;
   }
   .menu-card:hover{ transform:translateY(-6px); box-shadow:0 18px 40px var(--shadow); border-color:rgba(45,212,191,0.5); }
   .menu-card .num{ font-size:0.75rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--teal-soft); font-weight:700; margin-bottom:10px; display:block; }
@@ -120,6 +121,62 @@
 
   footer{ margin-top:80px; padding-top:28px; border-top:1px solid var(--glass-border); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; color:var(--text-faint); font-size:0.84rem; }
   footer .name{ color:var(--teal-soft); font-weight:600; }
+
+  /* ---------------- day detail views ---------------- */
+  .day-view{ max-width:820px; margin:0 auto; padding-top:60px; }
+  .back{ display:inline-flex; align-items:center; gap:6px; color:var(--text-soft); text-decoration:none; font-size:0.9rem; font-weight:600; margin-bottom:30px; background:none; border:none; cursor:pointer; font-family:inherit; }
+  .back:hover{ color:var(--teal-soft); }
+
+  .panel-card{ padding:40px 44px; }
+  @media (max-width:640px){ .panel-card{ padding:28px 22px; } }
+  .day-dot{ width:54px; height:54px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem; font-weight:800; color:#06131c; margin-bottom:18px; }
+  .day-dot.dot-1{ background:linear-gradient(135deg, var(--teal), var(--sky)); }
+  .day-dot.dot-2{ background:linear-gradient(135deg, var(--amber), var(--teal)); }
+  .day-dot.dot-3{ background:linear-gradient(135deg, var(--sky), var(--amber)); }
+  .panel-head{ border-bottom:1px solid var(--glass-border); padding-bottom:20px; margin-bottom:24px; }
+  .panel-head h1{ font-size:1.7rem; font-weight:800; margin-bottom:6px; }
+  .panel-date{ font-size:0.8rem; color:var(--text-faint); font-family:Consolas,'SFMono-Regular',monospace; letter-spacing:0.04em; }
+  .intro-text{ color:var(--text-soft); font-size:1rem; margin-bottom:26px; }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--glass-border); border-radius:14px; background:var(--glass-bg-strong); margin-bottom:24px; }
+  .info-table{ width:100%; border-collapse:collapse; }
+  .info-table th, .info-table td{ text-align:left; padding:14px 18px; vertical-align:top; }
+  .info-table th{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-faint); font-weight:700; border-bottom:1px solid var(--glass-border); white-space:nowrap; }
+  .info-table td{ font-size:0.95rem; color:var(--text-soft); border-bottom:1px solid var(--glass-border); }
+  .info-table tr:last-child td{ border-bottom:none; }
+  .info-table td:first-child{ color:#fff; font-weight:700; white-space:nowrap; }
+  .info-table.cmds td:first-child{ color:var(--teal-soft); font-family:Consolas,'SFMono-Regular',monospace; font-size:0.85rem; }
+
+  .tag-row{ display:flex; flex-wrap:wrap; gap:8px; margin-top:30px; padding-top:24px; border-top:1px solid var(--glass-border); }
+  .tag{ font-size:0.8rem; background:rgba(0,0,0,0.25); border:1px solid var(--glass-border); color:var(--teal-soft); padding:6px 12px; border-radius:999px; }
+
+  .cmd-row{ display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 24px; }
+  .cmd{ font-family:Consolas,'SFMono-Regular',monospace; font-size:0.85rem; background:rgba(0,0,0,0.35); border:1px solid var(--glass-border); color:var(--teal-soft); padding:6px 12px; border-radius:6px; }
+
+  .project-box{
+    margin-top:28px; padding:26px 28px; display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap;
+    background:var(--glass-bg-strong); border:1px solid var(--glass-border); border-radius:16px;
+  }
+  .project-box .p-info{ display:flex; align-items:center; gap:14px; }
+  .project-box .p-icon{ font-size:2rem; }
+  .project-box .p-title{ font-weight:800; color:#fff; font-size:1.05rem; }
+  .project-box .p-desc{ font-size:0.85rem; color:var(--text-soft); }
+  .p-url{ display:block; margin-top:4px; font-family:Consolas,'SFMono-Regular',monospace; font-size:0.8rem; color:var(--teal-soft); text-decoration:none; word-break:break-all; }
+  .p-url:hover{ text-decoration:underline; }
+  .play-link{
+    display:inline-flex; align-items:center; gap:8px;
+    font-weight:800; font-size:0.95rem; text-decoration:none;
+    color:#06131c; background:linear-gradient(135deg, var(--teal), var(--sky));
+    padding:12px 24px; border-radius:12px; white-space:nowrap;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .play-link:hover{ transform:translateY(-2px); box-shadow:0 12px 26px rgba(45,212,191,0.3); }
+
+  .step-list{ display:flex; flex-direction:column; gap:16px; margin-top:28px; padding-top:26px; border-top:1px solid var(--glass-border); }
+  .step{ display:flex; gap:16px; align-items:flex-start; padding:18px 20px; background:var(--glass-bg-strong); border:1px solid var(--glass-border); border-radius:14px; }
+  .step-num{ flex-shrink:0; width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.85rem; background:linear-gradient(135deg, var(--sky), var(--amber)); color:#06131c; }
+  .step-text{ color:var(--text-soft); font-size:0.98rem; }
+  .step-text strong{ color:#fff; }
 </style>
 </head>
 <body>
@@ -130,34 +187,148 @@
 
   <div class="wrap">
 
-    <header class="hero">
-      <span class="eyebrow">🤖 3-Day Learning Sprint</span>
-      <h1 class="title">My AI Learning Journey</h1>
-      <p class="subtitle">A hands-on sprint from first prompt to a working, automated Gmail sending pipeline — covering AI tooling, Git &amp; GitHub, and cloud API integration.</p>
-      <div class="name-badge"><span class="avatar">SH</span> SHOAIBUL HOQUE</div>
-    </header>
+    <!-- ============ HOME / MENU ============ -->
+    <div id="home-view">
+      <header class="hero">
+        <span class="eyebrow">🤖 3-Day Learning Sprint</span>
+        <h1 class="title">My AI Learning Journey</h1>
+        <p class="subtitle">A hands-on sprint from first prompt to a working, automated Gmail sending pipeline — covering AI tooling, Git &amp; GitHub, and cloud API integration.</p>
+        <div class="name-badge"><span class="avatar">SH</span> SHOAIBUL HOQUE</div>
+      </header>
 
-    <!-- MAIN MENU -->
-    <nav class="menu">
-      <a class="menu-card" href="day1.html" target="_blank" rel="noopener">
-        <span class="num">Day 1</span>
-        <div class="m-title">🚀 Getting Started</div>
-        <div class="m-desc">Claude AI, GitHub basics, and my first browser game.</div>
-        <span class="m-cta">View report <span class="arrow">→</span></span>
-      </a>
-      <a class="menu-card" href="day2.html" target="_blank" rel="noopener">
-        <span class="num">Day 2</span>
-        <div class="m-title">🔧 Git &amp; Deployment</div>
-        <div class="m-desc">Real Git commands and shipping the game live.</div>
-        <span class="m-cta">View report <span class="arrow">→</span></span>
-      </a>
-      <a class="menu-card" href="day3.html" target="_blank" rel="noopener">
-        <span class="num">Day 3</span>
-        <div class="m-title">📧 Gmail API</div>
-        <div class="m-desc">OAuth, credentials, and automated email sending.</div>
-        <span class="m-cta">View report <span class="arrow">→</span></span>
-      </a>
-    </nav>
+      <nav class="menu">
+        <a class="menu-card" href="#day1">
+          <span class="num">Day 1</span>
+          <div class="m-title">🚀 Getting Started</div>
+          <div class="m-desc">Claude AI, GitHub basics, and my first browser game.</div>
+          <span class="m-cta">View report <span class="arrow">→</span></span>
+        </a>
+        <a class="menu-card" href="#day2">
+          <span class="num">Day 2</span>
+          <div class="m-title">🔧 Git &amp; Deployment</div>
+          <div class="m-desc">Real Git commands and shipping the game live.</div>
+          <span class="m-cta">View report <span class="arrow">→</span></span>
+        </a>
+        <a class="menu-card" href="#day3">
+          <span class="num">Day 3</span>
+          <div class="m-title">📧 Gmail API</div>
+          <div class="m-desc">OAuth, credentials, and automated email sending.</div>
+          <span class="m-cta">View report <span class="arrow">→</span></span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- ============ DAY 1 ============ -->
+    <div id="day1-view" class="day-view" hidden>
+      <button class="back" type="button" onclick="goHome()">← Back to Portfolio</button>
+      <div class="glass panel-card">
+        <div class="day-dot dot-1">1</div>
+        <div class="panel-head">
+          <h1>🚀 Getting Started with AI &amp; GitHub</h1>
+          <span class="panel-date">Day 1 · Aug 17, 2026</span>
+        </div>
+        <p class="intro-text">Day 1 was about getting my tools in order — setting up an AI coding partner, understanding what GitHub actually is, and shipping something real instead of just reading about it.</p>
+        <div class="table-wrap">
+          <table class="info-table">
+            <thead><tr><th>What I did</th><th>Details</th></tr></thead>
+            <tbody>
+              <tr><td>Set up Claude AI</td><td>Learned how to prompt it effectively — explaining what I wanted clearly, reviewing what it built, and asking follow-up questions instead of accepting the first answer.</td></tr>
+              <tr><td>GitHub fundamentals</td><td>Learned the basics of version control — what a repository is, why commits matter, and how a public repo lets anyone view or reuse the code.</td></tr>
+              <tr><td>Basketball Shooter</td><td>Built my first browser game from scratch using HTML, CSS, and JavaScript, with Claude helping me structure the game logic and scoring.</td></tr>
+              <tr><td>Manual GitHub upload</td><td>Uploaded the project to GitHub for the first time — creating a repository through the website and dragging the files in, rather than using Git commands (that came on Day 2).</td></tr>
+              <tr><td>AI-assisted workflow</td><td>Got comfortable describing the goal, letting Claude write the first draft, then testing it in the browser and asking for fixes.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tag-row">
+          <span class="tag">🤖 AI Prompting</span>
+          <span class="tag">🐙 GitHub Basics</span>
+          <span class="tag">🎮 Game Development</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ DAY 2 ============ -->
+    <div id="day2-view" class="day-view" hidden>
+      <button class="back" type="button" onclick="goHome()">← Back to Portfolio</button>
+      <div class="glass panel-card">
+        <div class="day-dot dot-2">2</div>
+        <div class="panel-head">
+          <h1>🔧 Git Commands &amp; Deployment</h1>
+          <span class="panel-date">Day 2 · Aug 18, 2026</span>
+        </div>
+        <p class="intro-text">After uploading files by hand on Day 1, Day 2 was about learning the proper way developers actually ship code — using Git from the terminal instead of the GitHub website. First, Git works in a real development workflow, tracking changes locally before they ever reach GitHub. Then I practiced the core Git loop used to ship code, end to end:</p>
+        <div class="cmd-row">
+          <span class="cmd">git init</span>
+          <span class="cmd">git add</span>
+          <span class="cmd">git commit</span>
+          <span class="cmd">git push</span>
+        </div>
+        <div class="table-wrap">
+          <table class="info-table cmds">
+            <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+            <tbody>
+              <tr><td>git init</td><td>Turned a normal folder into a Git repository.</td></tr>
+              <tr><td>git add</td><td>Staged the files I wanted to save a checkpoint of.</td></tr>
+              <tr><td>git commit</td><td>Saved that checkpoint with a message describing what changed.</td></tr>
+              <tr><td>git push</td><td>Sent the commit up to GitHub so it was live and visible to anyone.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="info-table">
+            <thead><tr><th>What else I learned</th><th>Details</th></tr></thead>
+            <tbody>
+              <tr><td>Updating code</td><td>Learned to edit, add, commit, push again — instead of re-uploading whole folders.</td></tr>
+              <tr><td>Shipping it live</td><td>Used this exact workflow to deploy the Basketball Shooter game and enable GitHub Pages, turning the repo into a live, playable website.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="project-box">
+          <div class="p-info">
+            <span class="p-icon">🏀</span>
+            <div>
+              <div class="p-title">Basketball Shooter</div>
+              <div class="p-desc">The game I deployed live using Git on Day 2.</div>
+              <a class="p-url" href="https://shoaibul0926.github.io/My-first-game/" target="_blank" rel="noopener">https://shoaibul0926.github.io/My-first-game/</a>
+            </div>
+          </div>
+          <a class="play-link" href="https://shoaibul0926.github.io/My-first-game/" target="_blank" rel="noopener">🎮 Play the Game</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ DAY 3 ============ -->
+    <div id="day3-view" class="day-view" hidden>
+      <button class="back" type="button" onclick="goHome()">← Back to Portfolio</button>
+      <div class="glass panel-card">
+        <div class="day-dot dot-3">3</div>
+        <div class="panel-head">
+          <h1>📧 Gmail API &amp; Automation</h1>
+          <span class="panel-date">Day 3 · Aug 19, 2026</span>
+        </div>
+        <p class="intro-text">Day 3 moved from writing code to connecting real services — setting up Google's Gmail API and bringing Claude Pro into my terminal so I could automate a task end to end.</p>
+        <div class="table-wrap">
+          <table class="info-table">
+            <thead><tr><th>What I did</th><th>Details</th></tr></thead>
+            <tbody>
+              <tr><td>Google Cloud Platform</td><td>Connected my terminal to GCP to start building a real integration, not just a local script.</td></tr>
+              <tr><td>Auth &amp; API integration</td><td>Learned the basics of authentication and API integration — why apps need permission before they can act on your behalf.</td></tr>
+              <tr><td>Send emails programmatically</td><td>Built a working pipeline to send emails straight from the terminal.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="step-list">
+          <div class="step"><span class="step-num">1</span><p class="step-text"><strong>Set up the Gmail API</strong> in Google Cloud Console — created a project, enabled the Gmail API, and configured the OAuth consent screen.</p></div>
+          <div class="step"><span class="step-num">2</span><p class="step-text"><strong>Restricted the access on purpose</strong> — requested only a send-only permission, so the integration could send mail but never read my inbox.</p></div>
+          <div class="step"><span class="step-num">3</span><p class="step-text"><strong>Completed the OAuth authorization</strong> once through the browser consent screen, after which the terminal was trusted to send email without asking again each time.</p></div>
+          <div class="step"><span class="step-num">4</span><p class="step-text"><strong>Installed the Claude Code CLI</strong> and ran the login command to link my Claude Pro subscription to the terminal.</p></div>
+          <div class="step"><span class="step-num">5</span><p class="step-text">From that point on, I could just type <strong>claude</strong> in the terminal and work with it directly — no browser tab needed — which is how the rest of this automation got built.</p></div>
+        </div>
+      </div>
+    </div>
 
     <footer>
       <span>Report generated on <strong>August 19, 2026</strong></span>
@@ -165,6 +336,27 @@
     </footer>
 
   </div>
+
+  <script>
+    var dayIds = ['day1', 'day2', 'day3'];
+
+    function goHome(){
+      location.hash = '';
+    }
+
+    function render(){
+      var hash = location.hash.replace('#', '');
+      var isDay = dayIds.indexOf(hash) !== -1;
+      document.getElementById('home-view').hidden = isDay;
+      dayIds.forEach(function(id){
+        document.getElementById(id + '-view').hidden = (id !== hash);
+      });
+      window.scrollTo(0, 0);
+    }
+
+    window.addEventListener('hashchange', render);
+    render();
+  </script>
 
 </body>
 </html>
