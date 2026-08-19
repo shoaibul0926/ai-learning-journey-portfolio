@@ -40,6 +40,7 @@
   .highlight-list{ list-style:none; display:flex; flex-direction:column; gap:16px; margin-bottom:6px; }
   .highlight-list li{ display:flex; gap:12px; color:var(--text-soft); font-size:1.02rem; align-items:flex-start; }
   .highlight-list li::before{ content:"▸"; color:var(--teal-soft); flex-shrink:0; font-weight:700; }
+  .highlight-list li>span{ flex:1; min-width:0; }
   .highlight-list strong{ color:#fff; }
   .intro-text{ color:var(--text-soft); font-size:1rem; margin-bottom:26px; }
   .cmd-row{ display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 24px; }
@@ -81,8 +82,8 @@
       </div>
       <p class="intro-text">After uploading files by hand on Day 1, Day 2 was about learning the proper way developers actually ship code — using Git from the terminal instead of the GitHub website.</p>
       <ul class="highlight-list">
-        <li>Learned how <strong>Git works</strong> in a real development workflow — tracking changes locally before they ever reach GitHub.</li>
-        <li>Practiced the core Git loop used to ship code, end to end:</li>
+        <li><span>Learned how <strong>Git works</strong> in a real development workflow — tracking changes locally before they ever reach GitHub.</span></li>
+        <li><span>Practiced the core Git loop used to ship code, end to end:</span></li>
       </ul>
       <div class="cmd-row">
         <span class="cmd">git init</span>
@@ -91,12 +92,12 @@
         <span class="cmd">git push</span>
       </div>
       <ul class="highlight-list">
-        <li><strong>git init</strong> — turned a normal folder into a Git repository.</li>
-        <li><strong>git add</strong> — staged the files I wanted to save a checkpoint of.</li>
-        <li><strong>git commit</strong> — saved that checkpoint with a message describing what changed.</li>
-        <li><strong>git push</strong> — sent the commit up to GitHub so it was live and visible to anyone.</li>
-        <li>Learned how to <strong>update code after making changes</strong> locally — edit, add, commit, push again — instead of re-uploading whole folders.</li>
-        <li>Used this exact workflow to properly deploy the <strong>Basketball Shooter</strong> game and enable GitHub Pages, turning the repo into a live, playable website.</li>
+        <li><span><strong>git init</strong> — turned a normal folder into a Git repository.</span></li>
+        <li><span><strong>git add</strong> — staged the files I wanted to save a checkpoint of.</span></li>
+        <li><span><strong>git commit</strong> — saved that checkpoint with a message describing what changed.</span></li>
+        <li><span><strong>git push</strong> — sent the commit up to GitHub so it was live and visible to anyone.</span></li>
+        <li><span>Learned how to <strong>update code after making changes</strong> locally — edit, add, commit, push again — instead of re-uploading whole folders.</span></li>
+        <li><span>Used this exact workflow to properly deploy the <strong>Basketball Shooter</strong> game and enable GitHub Pages, turning the repo into a live, playable website.</span></li>
       </ul>
 
       <div class="project-box">

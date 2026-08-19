@@ -40,6 +40,7 @@
   .highlight-list{ list-style:none; display:flex; flex-direction:column; gap:16px; margin-bottom:8px; }
   .highlight-list li{ display:flex; gap:12px; color:var(--text-soft); font-size:1.02rem; align-items:flex-start; }
   .highlight-list li::before{ content:"▸"; color:var(--teal-soft); flex-shrink:0; font-weight:700; }
+  .highlight-list li>span{ flex:1; min-width:0; }
   .highlight-list strong{ color:#fff; }
   .intro-text{ color:var(--text-soft); font-size:1rem; margin-bottom:26px; }
 
@@ -66,9 +67,9 @@
       </div>
       <p class="intro-text">Day 3 moved from writing code to connecting real services — setting up Google's Gmail API and bringing Claude Pro into my terminal so I could automate a task end to end.</p>
       <ul class="highlight-list">
-        <li>Connected my terminal to <strong>Google Cloud Platform</strong> to start building a real integration, not just a local script.</li>
-        <li>Learned the basics of <strong>authentication and API integration</strong> — why apps need permission before they can act on your behalf.</li>
-        <li>Built a working pipeline to <strong>send emails programmatically</strong> straight from the terminal.</li>
+        <li><span>Connected my terminal to <strong>Google Cloud Platform</strong> to start building a real integration, not just a local script.</span></li>
+        <li><span>Learned the basics of <strong>authentication and API integration</strong> — why apps need permission before they can act on your behalf.</span></li>
+        <li><span>Built a working pipeline to <strong>send emails programmatically</strong> straight from the terminal.</span></li>
       </ul>
 
       <div class="step-list">
