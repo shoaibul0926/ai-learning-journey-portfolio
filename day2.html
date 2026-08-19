@@ -37,14 +37,17 @@
   .panel-head{ border-bottom:1px solid var(--glass-border); padding-bottom:20px; margin-bottom:24px; }
   .panel-head h1{ font-size:1.7rem; font-weight:800; margin-bottom:6px; }
   .panel-date{ font-size:0.8rem; color:var(--text-faint); font-family:Consolas,'SFMono-Regular',monospace; letter-spacing:0.04em; }
-  .highlight-list{ list-style:none; display:flex; flex-direction:column; gap:16px; margin-bottom:6px; }
-  .highlight-list li{ display:flex; gap:12px; color:var(--text-soft); font-size:1.02rem; align-items:flex-start; }
-  .highlight-list li::before{ content:"▸"; color:var(--teal-soft); flex-shrink:0; font-weight:700; }
-  .highlight-list li>span{ flex:1; min-width:0; }
-  .highlight-list strong{ color:#fff; }
-  .intro-text{ color:var(--text-soft); font-size:1rem; margin-bottom:26px; }
+  .intro-text{ color:var(--text-soft); font-size:1rem; margin-bottom:18px; }
   .cmd-row{ display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 24px; }
   .cmd{ font-family:Consolas,'SFMono-Regular',monospace; font-size:0.85rem; background:rgba(0,0,0,0.35); border:1px solid var(--glass-border); color:var(--teal-soft); padding:6px 12px; border-radius:6px; }
+  .table-wrap{ overflow-x:auto; border:1px solid var(--glass-border); border-radius:14px; background:var(--glass-bg-strong); margin-bottom:24px; }
+  .info-table{ width:100%; border-collapse:collapse; }
+  .info-table th, .info-table td{ text-align:left; padding:14px 18px; vertical-align:top; }
+  .info-table th{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-faint); font-weight:700; border-bottom:1px solid var(--glass-border); white-space:nowrap; }
+  .info-table td{ font-size:0.95rem; color:var(--text-soft); border-bottom:1px solid var(--glass-border); }
+  .info-table tr:last-child td{ border-bottom:none; }
+  .info-table td:first-child{ color:var(--teal-soft); font-weight:700; white-space:nowrap; font-family:Consolas,'SFMono-Regular',monospace; font-size:0.85rem; }
+  .info-table.topics td:first-child{ color:#fff; font-family:inherit; font-size:0.95rem; }
 
   .project-box{
     margin-top:28px; padding:26px 28px; display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap;
@@ -80,25 +83,33 @@
         <h1>🔧 Git Commands &amp; Deployment</h1>
         <span class="panel-date">Day 2 · Aug 18, 2026</span>
       </div>
-      <p class="intro-text">After uploading files by hand on Day 1, Day 2 was about learning the proper way developers actually ship code — using Git from the terminal instead of the GitHub website.</p>
-      <ul class="highlight-list">
-        <li><span>Learned how <strong>Git works</strong> in a real development workflow — tracking changes locally before they ever reach GitHub.</span></li>
-        <li><span>Practiced the core Git loop used to ship code, end to end:</span></li>
-      </ul>
+      <p class="intro-text">After uploading files by hand on Day 1, Day 2 was about learning the proper way developers actually ship code — using Git from the terminal instead of the GitHub website. First, Git works in a real development workflow, tracking changes locally before they ever reach GitHub. Then I practiced the core Git loop used to ship code, end to end:</p>
       <div class="cmd-row">
         <span class="cmd">git init</span>
         <span class="cmd">git add</span>
         <span class="cmd">git commit</span>
         <span class="cmd">git push</span>
       </div>
-      <ul class="highlight-list">
-        <li><span><strong>git init</strong> — turned a normal folder into a Git repository.</span></li>
-        <li><span><strong>git add</strong> — staged the files I wanted to save a checkpoint of.</span></li>
-        <li><span><strong>git commit</strong> — saved that checkpoint with a message describing what changed.</span></li>
-        <li><span><strong>git push</strong> — sent the commit up to GitHub so it was live and visible to anyone.</span></li>
-        <li><span>Learned how to <strong>update code after making changes</strong> locally — edit, add, commit, push again — instead of re-uploading whole folders.</span></li>
-        <li><span>Used this exact workflow to properly deploy the <strong>Basketball Shooter</strong> game and enable GitHub Pages, turning the repo into a live, playable website.</span></li>
-      </ul>
+      <div class="table-wrap">
+        <table class="info-table">
+          <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+          <tbody>
+            <tr><td>git init</td><td>Turned a normal folder into a Git repository.</td></tr>
+            <tr><td>git add</td><td>Staged the files I wanted to save a checkpoint of.</td></tr>
+            <tr><td>git commit</td><td>Saved that checkpoint with a message describing what changed.</td></tr>
+            <tr><td>git push</td><td>Sent the commit up to GitHub so it was live and visible to anyone.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-wrap">
+        <table class="info-table topics">
+          <thead><tr><th>What else I learned</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr><td>Updating code</td><td>Learned to edit, add, commit, push again — instead of re-uploading whole folders.</td></tr>
+            <tr><td>Shipping it live</td><td>Used this exact workflow to deploy the Basketball Shooter game and enable GitHub Pages, turning the repo into a live, playable website.</td></tr>
+          </tbody>
+        </table>
+      </div>
 
       <div class="project-box">
         <div class="p-info">
