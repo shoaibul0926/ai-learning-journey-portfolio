@@ -142,10 +142,13 @@
 
   .table-wrap{ overflow-x:auto; border:1px solid var(--glass-border); border-radius:14px; background:var(--glass-bg-strong); margin-bottom:24px; }
   .info-table{ width:100%; border-collapse:collapse; }
-  .info-table th, .info-table td{ text-align:left; padding:14px 18px; vertical-align:top; }
-  .info-table th{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-faint); font-weight:700; border-bottom:1px solid var(--glass-border); white-space:nowrap; }
-  .info-table td{ font-size:0.95rem; color:var(--text-soft); border-bottom:1px solid var(--glass-border); }
-  .info-table tr:last-child td{ border-bottom:none; }
+  .info-table th, .info-table td{ text-align:left; padding:14px 18px; vertical-align:top; border:1px solid var(--glass-border); }
+  .info-table th{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-faint); font-weight:700; white-space:nowrap; }
+  .info-table td{ font-size:0.95rem; color:var(--text-soft); }
+  .info-table tr:first-child th:first-child{ border-top-left-radius:14px; }
+  .info-table tr:first-child th:last-child{ border-top-right-radius:14px; }
+  .info-table tr:last-child td:first-child{ border-bottom-left-radius:14px; }
+  .info-table tr:last-child td:last-child{ border-bottom-right-radius:14px; }
   .info-table td:first-child{ color:#fff; font-weight:700; white-space:nowrap; }
   .info-table.cmds td:first-child{ color:var(--teal-soft); font-family:Consolas,'SFMono-Regular',monospace; font-size:0.85rem; }
 
