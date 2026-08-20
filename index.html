@@ -137,7 +137,13 @@
   .day-dot.dot-4{ background:linear-gradient(135deg, var(--amber), var(--sky)); }
   .panel-head{ border-bottom:1px solid var(--glass-border); padding-bottom:20px; margin-bottom:24px; }
   .panel-head h1{ font-size:1.7rem; font-weight:800; margin-bottom:6px; }
-  .panel-date{ font-size:0.8rem; color:var(--text-faint); font-family:Consolas,'SFMono-Regular',monospace; letter-spacing:0.04em; }
+  .panel-date{
+    display:inline-flex; align-items:center;
+    font-size:0.8rem; font-weight:700; color:var(--teal-soft);
+    font-family:Consolas,'SFMono-Regular',monospace; letter-spacing:0.04em;
+    background:var(--glass-bg-strong); border:1px solid var(--glass-border);
+    padding:6px 14px; border-radius:999px;
+  }
   .intro-text{ color:var(--text-soft); font-size:1rem; margin-bottom:26px; }
 
   .table-wrap{ overflow-x:auto; border:1px solid var(--glass-border); border-radius:14px; background:var(--glass-bg-strong); margin-bottom:24px; }
