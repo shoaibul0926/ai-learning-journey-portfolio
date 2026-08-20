@@ -96,6 +96,15 @@
     color:#06131c; font-weight:800; font-size:0.85rem;
   }
 
+  .download-report{
+    display:inline-flex; align-items:center; gap:8px;
+    margin-top:16px; padding:10px 22px; border-radius:999px;
+    background:transparent; border:1px solid var(--glass-border);
+    color:var(--teal-soft); font-weight:700; font-size:0.9rem;
+    text-decoration:none; transition:border-color .25s ease, color .25s ease, transform .25s ease;
+  }
+  .download-report:hover{ border-color:var(--teal); color:var(--teal); transform:translateY(-2px); }
+
   /* ---------------- main menu ---------------- */
   nav.menu{
     display:grid; grid-template-columns:repeat(2,1fr); gap:20px;
@@ -205,6 +214,8 @@
         <h1 class="title">My AI Learning Journey</h1>
         <p class="subtitle">A hands-on sprint from first prompt to a working, automated Gmail sending pipeline and a team-built Canvas art wall — covering AI tooling, Git &amp; GitHub, cloud API integration, and team collaboration.</p>
         <div class="name-badge"><span class="avatar">SH</span> SHOAIBUL HOQUE</div>
+        <br>
+        <a class="download-report" href="ai-learning-journey-report.pdf" download>📄 Download Full Report (PDF)</a>
       </header>
 
       <nav class="menu">
